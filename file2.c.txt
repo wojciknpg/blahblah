@@ -1,4 +1,5 @@
-#include <stdio.h>//tutaj tutaj
+<<<<<<< HEAD
+#include <stdio.h>//tutaj tutaj komentarz mwojcik
 #include <conio.h>
 #define MAX1 5
 void main()
