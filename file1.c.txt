@@ -4,7 +4,7 @@
 void main()
 {
 int temps[MAX1]; /* tablica */
-int index, total;
+int index, total; //komentarz do tej linijki
 int MAX;
 float min, maks;
 float average, celsius;
