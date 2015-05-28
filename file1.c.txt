@@ -9,7 +9,7 @@ int MAX;
 float min, maks;
 float average, celsius;
 float max;
-/* max=(float) MAX; */ /* rzutowanie 
+/* max=(float) MAX; */ /* rzutowanie //TO JEST MÓJ MEGA SUPER KOMENTARZ !!@!!@!!!11!!!
 -
 zamiana MAX na float */
 total=0.0;
