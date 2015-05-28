@@ -1,0 +1,96 @@
+#include <stdio.h>
+#include <conio.h>
+#define MAX1 5
+void main()
+{
+int temps[MAX1]; /* tablica */
+int index, total;
+int MAX;
+float min, maks;
+float average, celsius;
+float max;
+int found;
+int wart;
+/*
+max=(float) MAX; */ /* rzutowanie 
+-
+zamiana MAX na float */
+total=0.0;
+clrscr();
+puts("Przeliczenie stopni F na C
+\
+n");
+printf("Podaj ilosc obliczen <= %d : ",MAX);
+scanf("%d",&MAX);
+/* wprowadz. danych do tablicy */
+for(index=0; index < MAX; index++)
+{
+pr
+intf("Podaj temperature #%d: ", index);
+scanf("%d",&temps[index]);
+}
+min=temps[0]; maks=temps[0];
+/* obliczenie sumy */
+for(index=0; index < MAX; index++)
+{
+if (temps[index] > maks) maks=temps[index];
+if (temps[index] < min) min =temps[index];
+total+=temps
+[index];
+/* printf("min: %f maks: %f
+\
+n",min, maks); */
+}
+average=total/MAX; /* srednia */
+printf("Srednia : %f
+\
+n", average);
+printf("Min: %f Max: %f
+\
+n
+\
+n",min, maks);
+puts("Fahrenheit
+\
+tCelsius
+\
+n");
+/* czyta wartosci z tablicy i zamienia */
+for(index=0; inde
+x < MAX; index++)
+{
+celsius = (5.0/9.0)*(temps[index]
+-
+32);
+printf("%d
+\
+t
+\
+t%6.2f
+\
+n",temps[index], celsius);
+}
+puts("Szukanie podanej wartosci");
+do
+{
+printf("Podaj szukana wartosc: 999 koniec ");
+scanf("%d", &wart);
+index=0; found=0;
+while (!found && index <
+MAX )
+{
+if (temps[index]==wart)
+found=1; else index++;
+}
+if (!found)
+printf ("Nie ma wartosci %d w tablicy
+\
+n", wart);
+else
+printf("Wartosc %d wystepuje na pozycji %d
+\
+n", wart, index);
+}
+while (wart != 999);
+getch();
+}
