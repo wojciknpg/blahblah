@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <conio.h>
+#define COUNTM 50
+void convert(int heat[]);
+int COUNT;
+void main()
+{ /* main */
+int temps[COUNTM];
+int index, total;
+float cel
+sius;
+clrscr();
+puts("Funkcja main() 
+-
+program glowny");
+/*load the array with values */
+printf("Podaj wielkosc tablicy < %d : ", COUNTM);
+scanf("%d",&COUNT);
+for(index=0; index < COUNT; index++)
+{
+printf("Podaj temperature #%d:", index);
+scanf("%d",&temps
+[index]);
+} /* for */
+/* pass array to convert */
+convert(temps);
+puts("
+\
+nPowrot do programu glownwgo");
+getch();
+} /* main */
+void convert(int heat[])
+{ /* convert() */
+int index;
+float celsius;
+puts("
+\
+nFunkcja convert()");
+puts("Temperatury w st F i C 
+\
+n
+");
+for(index=0; index <COUNT; index++)
+{
+celsius = (5.0/9.0)*(heat[index]
+-
+32);
+printf("%d
+\
+t
+\
+t%6.2f
+\
+n",heat[index], celsius);
+}
+}
