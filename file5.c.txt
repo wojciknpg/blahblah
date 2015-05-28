@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <conio.h>
+#define MAX1 5
+void main()
+{
+int temps[MAX1]; /* tablica */
+int index, total;
+int MAX;
+float min, maks;
+float average, celsius;
+float max;
+/* max=(float) MAX; */ /* rzutowanie 
+-
+zamiana MAX na float */
+total=0.0;
+clrscr();
+puts("Przeliczenie stopni F na C
+\
+n");
+printf("Podaj ilosc obliczen <= %d : ",MAX);
+scanf("%d",&MAX);
+/* wprowadz. danych do tablicy */
+f
+or(index=0; index < MAX; index++)
+{
+printf("Podaj temperature #%d: ", index);
+scanf("%d",&temps[index]);
+}
+min=temps[0]; maks=temps[0];
+/* obliczenie sumy */
+for(index=0; index < MAX; index++)
+{
+if (temps[index] > maks) maks=temps[index];
+if (temps[index] 
+< min) min =temps[index];
+total+=temps[index];
+/* printf("min: %f maks: %f
+\
+n",min, maks); */
+}
+average=total/MAX; /* srednia */
+printf("Srednia : %f
+\
+n", average);
+printf("Min: %f Max: %f
+\
+n
+\
+n",min, maks);
+puts("Fahrenheit
+\
+tCelsius
+\
+n");
+/* czyta wartosci z t
+ablicy i zamienia */
+for(index=0; index < MAX; index++)
+{
+celsius = (5.0/9.0)*(temps[index]
+-
+32);
+printf("%d
+\
+t
+\
+t%6.2f
+\
+n",temps[index], celsius);
+}
+getch();
+}
